@@ -27,7 +27,7 @@ const FlipCard = ({ value, label }: { value: string; label: string }) => {
   }, [value, topValue]);
 
   return (
-    <div className="bg-green-300 rounded-3xl p-8 w-48 h-64 flex flex-col shadow-2xl relative">
+    <div className="bg-green-400 rounded-3xl p-8 w-48 h-64 flex flex-col shadow-2xl relative">
       <div className="text-white text-md font-bold opacity-100 text-left">
         {label}
       </div>
@@ -39,14 +39,14 @@ const FlipCard = ({ value, label }: { value: string; label: string }) => {
       >
         <div className="relative w-full h-32">
           {/* 상단 고정 패널 (현재 상단 값) */}
-          <div className="absolute inset-x-0 top-0 h-1/2 bg-green-300 overflow-hidden z-10">
+          <div className="absolute inset-x-0 top-0 h-1/2 bg-green-400 overflow-hidden z-10">
             <div className="flex items-start justify-center h-full pt-8">
               <span className="text-white text-7xl font-bold">{topValue}</span>
             </div>
           </div>
 
           {/* 하단 고정 패널 (새로운 값 즉시 표시) */}
-          <div className="absolute inset-x-0 bottom-0 h-1/2 bg-green-300 overflow-hidden z-10">
+          <div className="absolute inset-x-0 bottom-0 h-1/2 bg-green-400 overflow-hidden z-10">
             <div className="flex items-start justify-center h-full pt-2">
               <span
                 className="text-white text-7xl font-bold"
@@ -62,9 +62,9 @@ const FlipCard = ({ value, label }: { value: string; label: string }) => {
             <>
               {/* 상단 패널이 아래로 떨어짐 */}
               <div
-                className="flip-top absolute inset-x-0 top-0 h-1/2 bg-green-300 overflow-hidden z-20"
+                className="flip-top absolute inset-x-0 top-0 h-1/2 bg-green-400 overflow-hidden z-20"
                 style={{
-                  animation: "flipTopDown 0.4s ease-in-out forwards",
+                  animation: "flipTopDown 0.5s ease-in-out forwards",
                   transformOrigin: "bottom",
                   transformStyle: "preserve-3d",
                   backfaceVisibility: "hidden",
@@ -79,7 +79,7 @@ const FlipCard = ({ value, label }: { value: string; label: string }) => {
 
               {/* 새로운 하단 패널이 뒤에서 나타남 */}
               <div
-                className="flip-bottom absolute inset-x-0 bottom-0 h-1/2 bg-green-300 overflow-hidden z-15"
+                className="flip-bottom absolute inset-x-0 bottom-0 h-1/2 bg-green-400 overflow-hidden z-15"
                 style={{
                   animation: "flipBottomUp 0.4s ease-in-out forwards",
                   transformOrigin: "top",
@@ -145,6 +145,8 @@ export default function TimePage() {
 
         {/* Minutes Card with Flip Animation */}
         <FlipCard value={minutes} label={dayOfWeek} />
+
+        {/* <FlipCard value={seconds} label="Seconds" /> */}
       </div>
     </div>
   );
