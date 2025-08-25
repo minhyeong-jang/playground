@@ -27,7 +27,7 @@ const FlipCard = ({ value, label }: { value: string; label: string }) => {
   }, [value, topValue]);
 
   return (
-    <div className="bg-green-400 rounded-3xl p-8 w-48 h-64 flex flex-col shadow-2xl relative">
+    <div className="bg-green-400 rounded-3xl p-4 w-36 h-56 flex flex-col shadow-2xl relative">
       <div className="text-white text-md font-bold opacity-100 text-left">
         {label}
       </div>
