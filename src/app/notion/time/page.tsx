@@ -135,7 +135,7 @@ export default function TimePage() {
     };
   };
 
-  const { hours, minutes, period, dayOfWeek, seconds } = formatTime(time);
+  const { hours, minutes, period, dayOfWeek } = formatTime(time);
 
   return (
     <div className="min-h-screen bg-zinc-900 flex items-center justify-center p-8">
