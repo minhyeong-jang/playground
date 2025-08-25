@@ -138,7 +138,7 @@ export default function TimePage() {
   const { hours, minutes, period, dayOfWeek } = formatTime(time);
 
   return (
-    <div className="min-h-screen bg-zinc-900 flex items-center justify-center p-8">
+    <div className="bg-zinc-900 flex">
       <div className="flex gap-4">
         {/* Hours Card with Flip Animation */}
         <FlipCard value={hours} label={period} />
