@@ -27,7 +27,7 @@ const FlipCard = ({ value, label }: { value: string; label: string }) => {
   }, [value, topValue]);
 
   return (
-    <div className="bg-[#7fb686] rounded-3xl p-4 w-36 h-64 flex flex-col shadow-2xl relative">
+    <div className="bg-[#7fb686] rounded-3xl p-4 w-full h-64 flex flex-col shadow-2xl relative">
       <div className="text-white text-md font-bold opacity-100 text-left">
         {label}
       </div>
@@ -138,13 +138,17 @@ export default function TimePage() {
   const { hours, minutes, period, dayOfWeek } = formatTime(time);
 
   return (
-    <div className="bg-zinc-900 min-h-screen flex items-center justify-center">
-      <div className="flex gap-4">
+    <div className="bg-zinc-900 min-h-screen flex items-center justify-center w-full">
+      <div className="flex w-full ">
         {/* Hours Card with Flip Animation */}
-        <FlipCard value={hours} label={period} />
+        <div className="w-1/2 pr-2">
+          <FlipCard value={hours} label={period} />
+        </div>
 
         {/* Minutes Card with Flip Animation */}
-        <FlipCard value={minutes} label={dayOfWeek} />
+        <div className="w-1/2 pl-2">
+          <FlipCard value={minutes} label={dayOfWeek} />
+        </div>
 
         {/* <FlipCard value={seconds} label="Seconds" /> */}
       </div>

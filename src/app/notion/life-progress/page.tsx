@@ -144,9 +144,9 @@ export default function LifeProgressPage() {
   }, []);
 
   return (
-    <div className="bg-zinc-900 min-h-screen flex items-center justify-center">
-      <div className="w-full max-w-2xl mx-auto">
-        <div className="bg-[#7fb686]/90 rounded-xl p-6 shadow-lg backdrop-blur-sm">
+    <div className="bg-zinc-900 min-h-screen flex items-center justify-center w-full">
+      <div className="w-full  mx-auto">
+        <div className="bg-[#7fb686]/90 rounded-xl p-6 shadow-lg backdrop-blur-sm w-full">
           <h2 className="text-white text-xl font-bold mb-4 text-center">
             Life Progress
           </h2>
