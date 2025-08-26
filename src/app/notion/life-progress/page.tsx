@@ -144,9 +144,8 @@ export default function LifeProgressPage() {
   }, []);
 
   return (
-    <div className="bg-transparent p-4">
+    <div className="bg-zinc-900 min-h-screen flex items-center justify-center">
       <div className="w-full max-w-2xl mx-auto">
-        {/* 메인 컨테이너 - 노션 다크 테마에 맞춘 색상 */}
         <div className="bg-[#7fb686]/90 rounded-xl p-6 shadow-lg backdrop-blur-sm">
           <h2 className="text-white text-xl font-bold mb-4 text-center">
             Life Progress
